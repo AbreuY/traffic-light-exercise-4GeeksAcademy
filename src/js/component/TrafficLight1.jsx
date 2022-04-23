@@ -23,16 +23,6 @@ export const TrafficLight = props => {
 								lamp.color == selected ? undefined : lamp.color
 							);
 						}}
-						/* onClick={e => {
-                        setLamps(prevLamps =>
-                            prevLamps.map((_lamp, _index) => {
-                                return {
-                                    isOn: lamp.color == _lamp.color,
-                                    color: _lamp.color
-                                };
-                            })
-                        );
-                    }} */
 					/>
 				);
 			})}
