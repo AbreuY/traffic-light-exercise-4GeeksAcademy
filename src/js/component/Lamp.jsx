@@ -2,17 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Lamp = props => {
+	const newProps = Object.assign({}, props);
+	delete newProps.setSelected;
 	return (
 		<div
-			className={`${props.color} ${
-				props.color == props.selected ? "light" : ""
+			className={`${newProps.color} ${
+				newProps.color == newProps.selected ? "light" : ""
 			}`}
-			/* onClick={e => {
-				props.setSelected(
-					props.color == props.selected ? undefined : props.color
-				);
-			}} */
-			{...props}></div>
+			{...newProps}></div>
 	);
 };
 
